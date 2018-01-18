@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb-base",
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "acyort": true
+  },
+  "rules": {
+    "semi": [2, "never"]
+  }
+}
