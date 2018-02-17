@@ -1,1 +1,1 @@
-acyort.extend.helper('_toc', require('./toc').bind(acyort))
+acyort.helper.register('_toc', require('./toc').bind(acyort))
