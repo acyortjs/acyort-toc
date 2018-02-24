@@ -1,6 +1,6 @@
 {
   "name": "acyort-toc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toc Helper for AcyOrt",
   "main": "index.js",
   "scripts": {
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/acyortjs/acyort-toc#readme",
   "devDependencies": {
-    "acyort": "^2.1.0",
-    "acyort-config": "^0.1.5",
+    "acyort": "^2.1.1",
+    "acyort-config": "^1.0.2",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
