@@ -13,11 +13,11 @@ config.cache =  true
 config.scripts = ['helper.js']
 config.scripts_dir = '/'
 
-const acyort = new Acyort(config)
-
 describe('toc', () => {
   it('get toc', async function () {
     this.timeout(5000)
+
+    const acyort = new Acyort(config)
     await acyort.build()
 
     assert($('/about/index.html').html() === `<html><head></head><body><ul>
@@ -26,5 +26,17 @@ describe('toc', () => {
 </body></html>`)
 
     assert($('/time/index.html').html() === `<html><head></head><body></body></html>`)
+  })
+
+  it('reset', async function () {
+    this.timeout(5000)
+
+    const acyort = new Acyort(config)
+    await acyort.start(2222)
+    await acyort.build()
+
+    assert(typeof acyort.helper.methods._toc === 'function')
+
+    acyort.server.close()
   })
 })
