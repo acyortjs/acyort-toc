@@ -33,10 +33,9 @@ describe('toc', () => {
 
     const acyort = new Acyort(config)
     await acyort.start(2222)
+    acyort.helper.reset()
     await acyort.build()
-
     assert(typeof acyort.helper.methods._toc === 'function')
-
     acyort.server.close()
   })
 })

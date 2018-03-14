@@ -1,7 +1,1 @@
-const toc = require('./toc')
-
-const { running } = acyort.server.status
-
-if (!running) {
-  acyort.helper.register('_toc', toc.bind(acyort))
-}
+acyort.helper.register('_toc', require('./toc').bind(acyort))
