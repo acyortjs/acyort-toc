@@ -1,6 +1,2 @@
-coverage/
 node_modules/
 .DS_Store
-test/about/
-test/time/
-*.swp
