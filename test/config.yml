@@ -1,0 +1,9 @@
+url:
+template: ccc45
+scripts:
+  - script.js
+  - toc.js
+plugins:
+public: /
+timezone:
+language: en

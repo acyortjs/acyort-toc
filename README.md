@@ -24,3 +24,18 @@ plugins:
 {{ _toc() }}
 </div>
 ```
+
+## Test
+
+install AcyOrt
+
+```bash
+$ npm i acyort -g
+```
+
+then
+
+```bash
+$ cd test
+$ acyort flow
+```
