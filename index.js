@@ -1,25 +1,25 @@
 const tocFn = require('markdown-toc')
 
-function toc({ raw }) {
-  const { marker } = this
-  const { content } = tocFn(raw)
-  const { headingIdFormater } = marker
+module.exports = (acyort) => {
+  function toc() {
+    const { raw } = this
+    const { content } = tocFn(raw)
 
-  let html = marker.parse(content)
+    let html = acyort.renderer.render('markdown', content)
 
-  const hrefs = html.match(/href="([^"]*")/g) || []
-  const hrefsifies = hrefs.map((href) => {
-    let s = href.split('href="')[1]
-    s = s.substring(0, s.length - 1)
-    s = headingIdFormater(s)
-    return `href="${s}"`
-  })
+    const hrefs = html.match(/href="([^"]*")/g) || []
+    const hrefsifies = hrefs.map((href) => {
+      let s = href.split('href="')[1]
+      s = s.substring(0, s.length - 1)
+      return `href="${s}"`
+    })
 
-  hrefs.forEach((href, i) => {
-    html = html.replace(href, hrefsifies[i])
-  })
+    hrefs.forEach((href, i) => {
+      html = html.replace(href, hrefsifies[i])
+    })
 
-  return html
+    return html
+  }
+
+  acyort.helper.register('_toc', toc)
 }
-
-module.exports = toc
