@@ -8,7 +8,7 @@ module.exports = (acyort) => {
 this is h1
 ## h2_h4#s
 this is h2
-# h1/h6
+# h1/h6 I ♥ Dogs
 this is h11
 `,
       },
