@@ -1,6 +1,6 @@
 {
   "name": "acyort-toc",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Toc Helper for AcyOrt",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "cd test && acyort flow"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "slugify.js"
   ],
   "repository": {
     "type": "git",
