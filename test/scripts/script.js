@@ -10,6 +10,12 @@ this is h1
 this is h2
 # h1/h6 I ♥ Dogs
 this is h11
+# 这是一段中文 并且有  english
+this is h11
+# 这是一段中文
+this is h11
+# 这是@一#段$；¥中#文「【
+this is h11
 `,
       },
     })

@@ -1,5 +1,5 @@
 const transform = require('doctoc/lib/transform')
-const slugify = require('@sindresorhus/slugify')
+const slugify = require('./slugify')
 
 module.exports = (acyort) => {
   const hrefRegex = /href="(.*?)"/g
@@ -26,3 +26,5 @@ module.exports = (acyort) => {
     return html
   })
 }
+
+module.exports.slugify = slugify
