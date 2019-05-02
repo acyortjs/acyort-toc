@@ -9,6 +9,9 @@ module.exports = (s) => {
     return s.trim()
       .replace(space, '')
       .replace(punctuation, '-')
+      .split('-')
+      .filter(t => t)
+      .join('-')
   }
   return slugify(s)
 }
