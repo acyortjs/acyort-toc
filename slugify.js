@@ -1,14 +1,16 @@
 const slugify = require('@sindresorhus/slugify')
 
-const chinese = /[\u4E00-\u9FA5]/g
-const space = /\s+/g
-const punctuation = /["`~!@#$^&*()=|{}':;',[\].<>/?~！&*（）——|{}【】「」¥‘；：”“'。，、？]/g
-
 module.exports = (s) => {
+  const chinese = /[\u4E00-\u9FA5]/g
+  const space = /\s+/g
+  const punctuation = /["`~!@#$^&*()=|{}':;',[\].<>/?~！&*（）——|{}【】「」¥‘；：”“'。，、？]/g
+
   if (chinese.test(s)) {
     return s.trim()
-      .replace(space, '')
-      .replace(punctuation, '-')
+      .split(space)
+      .join('')
+      .split(punctuation)
+      .join('-')
       .split('-')
       .filter(t => t)
       .join('-')
