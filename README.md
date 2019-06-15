@@ -42,6 +42,17 @@ const { slugify } = require('acyort-toc')
 acyort.renderer.render('markdown', body, { getHeadingId: slugify })
 ```
 
+### Advanced
+
+```js
+module.exports = (acyort) => {
+  const { helper } = acyort
+  const toc = helper.get('_toc')
+
+  toc('markdown raw string')
+}
+```
+
 ## Test
 
 ```bash
